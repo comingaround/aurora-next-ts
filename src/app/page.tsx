@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Link href="/dashboard">Dashboard</Link>
+      <Link href="/about">About</Link>
 
       <div className={styles.center}>
         <Image

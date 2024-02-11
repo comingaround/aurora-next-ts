@@ -1,0 +1,84 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.NavBar > div:first-child {
+  width: 12vw;
+}
+.NavList {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.NavList a {
+  font-size: max(1rem, 16px);
+  font-weight: 300;
+}
+.NavBar ul:last-child {
+  display: flex;
+  gap: 16px;
+}
+.BurgerOn {
+  display: none;
+}
+.NavBar ul p {
+  display: none;
+}
+.LoginButton {
+  display: none;
+}
+.Logo {
+  display: none;
+}
+@media (max-width: 768px) {
+  .NavBar > div:first-child {
+    width: 0;
+  }
+  .NavList {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    width: calc(100% - 40px);
+    z-index: 10;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .NavList > * {
+    padding: 12.5px 0;
+  }
+  .NavList a {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+  }
+  .NavBar ul p {
+    display: block;
+    padding-right: 4px;
+  }
+  .BurgerOn {
+    display: block;
+  }
+  .LoginIcon {
+    display: none;
+  }
+  .Logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .LoginButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 27.5px;
+  }
+  .LoginButton a {
+    padding: 14px max(20vw, 100px);
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 33px;
+  }
+}
+

@@ -2,12 +2,10 @@ import Link from 'next/link'
 import styles from "./about.module.css";
 import NavBar from "../components/General/NavBar/NavBar";
 
-export default function Dashboard() {
+export default function About() {
     return(
         <>
-            <h1 className={styles.dash}>Hello, Dashboard Page!</h1>
             <NavBar />
-            <Link href="/">Home</Link>
         </>
     );
   }

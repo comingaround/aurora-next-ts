@@ -10,6 +10,8 @@
   display: flex;
   gap: 24px;
   align-items: center;
+  visibility: visible;
+  opacity: 1;
 }
 .NavList a {
   font-size: max(1rem, 16px);

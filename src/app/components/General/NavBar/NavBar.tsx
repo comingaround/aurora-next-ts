@@ -1,15 +1,24 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./NavBar.module.css";
 import Link from 'next/link'
 
 export default function NavBar() {
-    const [isNavListVisible, setIsNavListVisible] = useState(false);
+    const [NavVisible, setNavVisible] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setNavVisible(window.innerWidth > 768);
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return(
         <div className={styles.NavBar}>
             <div></div>
-            <ul className={styles.NavList} style={{ opacity: isNavListVisible ? '1' : '0', visibility: isNavListVisible ? 'visible' : 'hidden', transition: 'opacity 0.1s linear, visibility 0.25s linear 0.1s' }}>
+            <ul className={styles.NavList} style={{ opacity: NavVisible ? '1' : '0', visibility: NavVisible ? 'visible' : 'hidden', transition: 'opacity 0.1s linear, visibility 0.1s linear 0.2s' }}>
                 <div className={styles.Logo}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="97" height="22" viewBox="0 0 97 22" fill="none">
                         <path d="M52.9025 9.37527C53.1772 7.64259 54.6352 5.71973 57.4878 5.71973C61.1011 5.71973 62.0942 7.89615 62.0942 10.2416V14.4465C62.0942 15.2706 62.1365 16.3271 62.2633 16.9611H59.7699C59.7276 16.5385 59.7065 16.1158 59.7065 15.6721V15.165H59.6854C59.3261 16.0525 58.3964 17.2358 56.22 17.2358C53.7477 17.2358 52.3743 15.7144 52.3743 13.9817C52.3743 10.96 56.0721 10.7065 57.6568 10.4529C59.0514 10.2416 59.6854 9.96692 59.6854 9.03719C59.6854 8.17084 58.8613 7.62146 57.5301 7.62146C56.3468 7.62146 55.4804 8.29763 55.2269 9.37527H52.9025ZM54.8043 13.8972C54.8043 14.7635 55.5438 15.3974 56.8328 15.3974C58.2908 15.3974 59.7276 14.4888 59.7276 11.8898V10.7487C59.4952 11.3615 58.9247 11.8898 57.0652 12.249C55.5649 12.5237 54.8043 12.9886 54.8043 13.8972Z" fill="#0E0E0E"/>
@@ -20,7 +29,7 @@ export default function NavBar() {
                         <path d="M4.4599 9.37527C4.73459 7.64259 6.19258 5.71973 9.04518 5.71973C12.6585 5.71973 13.6516 7.89615 13.6516 10.2416V14.4465C13.6516 15.2706 13.6938 16.3271 13.8206 16.9611H11.3273C11.285 16.5385 11.2639 16.1158 11.2639 15.6721V15.165H11.2427C10.8835 16.0525 9.95378 17.2358 7.77736 17.2358C5.30511 17.2358 3.93164 15.7144 3.93164 13.9817C3.93164 10.96 7.62945 10.7065 9.21422 10.4529C10.6088 10.2416 11.2427 9.96692 11.2427 9.03719C11.2427 8.17084 10.4186 7.62146 9.08744 7.62146C7.90414 7.62146 7.0378 8.29763 6.78423 9.37527H4.4599ZM6.36163 13.8972C6.36163 14.7635 7.10119 15.3974 8.39014 15.3974C9.84813 15.3974 11.285 14.4888 11.285 11.8898V10.7487C11.0526 11.3615 10.482 11.8898 8.62257 12.249C7.12232 12.5237 6.36163 12.9886 6.36163 13.8972Z" fill="#0E0E0E"/>
                         <path d="M72.8308 8.86881C73.959 7.67444 75.2984 6.72694 76.7725 6.08048C78.2465 5.43402 79.8264 5.10132 81.4219 5.10132C83.0174 5.10132 84.5973 5.43402 86.0713 6.08048C87.5453 6.72695 88.8848 7.67443 90.013 8.86881C91.1411 10.0633 92.036 11.4813 92.6466 13.0419C93.1672 14.3727 93.4724 15.7848 93.551 17.2192H89.7969C89.6462 12.215 85.8801 8.20872 81.2562 8.20872C76.6324 8.20872 72.8663 12.215 72.7156 17.2192H69.2927C69.3713 15.7848 69.6765 14.3727 70.1972 13.042C70.8078 11.4813 71.7027 10.0633 72.8308 8.86881Z" fill="#0E0E0E"/>
                     </svg>
-                    <div className={styles.BurgerOff} onClick={() => setIsNavListVisible(false)}>
+                    <div className={styles.BurgerOff} onClick={() => setNavVisible(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M18 6L6 18" stroke="#0E0E0E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6 6L18 18" stroke="#0E0E0E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -79,7 +88,7 @@ export default function NavBar() {
                     </svg>
                 </li>
                 </a>
-                <div className={styles.BurgerOn} onClick={() => setIsNavListVisible(true)}>
+                <div className={styles.BurgerOn} onClick={() => setNavVisible(true)}>
                     <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.5 5.83325H17.5" stroke="#0E0E0E" strokeWidth="1.25" stroke-linecap="round"/>
                         <path d="M2.5 10H17.5" stroke="#0E0E0E" strokeWidth="1.25" stroke-linecap="round"/>

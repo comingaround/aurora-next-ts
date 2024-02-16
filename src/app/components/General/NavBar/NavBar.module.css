@@ -3,19 +3,18 @@
   justify-content: space-between;
   width: 100%;
 }
-.NavBar > div:first-child {
-  width: 12vw;
-}
 .NavList {
   display: flex;
   gap: 24px;
   align-items: center;
+  justify-content: center;
   visibility: visible;
   opacity: 1;
 }
 .NavList a {
   font-size: max(1rem, 16px);
   font-weight: 300;
+  opacity: 0.5;
 }
 .NavBar ul:last-child {
   display: flex;
@@ -30,13 +29,17 @@
 .LoginButton {
   display: none;
 }
-.Logo {
+.LogoDesk {
+  padding-top: 5px;
+}
+.LogoMob {
   display: none;
 }
+.NavList a.activePath {
+  text-decoration: underline;
+  opacity: 1;
+}
 @media (max-width: 768px) {
-  .NavBar > div:first-child {
-    width: 0;
-  }
   .NavList {
     visibility: hidden;
     display: block;
@@ -66,7 +69,7 @@
   .LoginIcon {
     display: none;
   }
-  .Logo {
+  .LogoMob {
     display: flex;
     justify-content: space-between;
   }
@@ -81,6 +84,7 @@
     color: white;
     background-color: black;
     border-radius: 33px;
+    opacity: 1;
   }
 }
 

@@ -1,11 +1,16 @@
-import Image from "next/image";
 import styles from "./home.module.css";
-import Link from 'next/link'
-import NavBar from "./components/General/NavBar/NavBar";
+import Header from "./components/Home/Header/Header";
+import HeroOne from "./components/Home/HeroOne/HeroOne";
+import BestSellers from "./components/Home/BestSellers/BestSellers";
+import Collections from "./components/Home/Collections/Collections";
 
 export default function Home() {
   return (
     <>
+      <Header />
+      <HeroOne />
+      <BestSellers />
+      <Collections />
     </>
   );
 }

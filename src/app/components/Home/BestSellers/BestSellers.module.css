@@ -1,0 +1,79 @@
+.BestSellers {
+ padding: 80px 0 0;
+}
+.shouter {
+    padding-bottom: 60px;
+}
+.shouter section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shouter section a {
+    color: white;
+    padding: 16px 26px;
+    background-color: black;
+    border-radius: 33px;
+}
+.shouter p {
+    padding: 12px 0;
+    color: var(--Foundation-Gray, #808080);
+    font-size: 1.12rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.BestSection {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.BestItem {
+    width: calc(32% + 0.35vw);
+    background-color: #EFEFEF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.BestItem section {
+    display: flex;
+    justify-content: space-between;
+}
+.BestItem > div:last-child {
+    padding: 24px;
+    align-self: flex-start;
+    width: 100%;
+}
+.BestItem h3 {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.BestItem p {
+    color: var(--Foundation-Gray, #808080);
+    font-size: 1,5rem;
+    font-style: normal;
+    font-weight: 250;
+    line-height: normal;
+}
+.ImageCont {
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    padding: 24px 0;
+}
+@media (max-width: 1439px) {
+    .BestItem {
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 768px) {
+    .BestItem {
+        width: 100%;
+    }
+}

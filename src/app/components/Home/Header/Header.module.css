@@ -1,0 +1,49 @@
+.Header {
+    margin-top: 24px;
+    width: 100%;
+    position: relative;
+    height: calc(100vh - 76px);
+    overflow: hidden;
+}
+.Header img {
+    border-radius: 10px;
+}
+.HeaderText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 0 18vw;
+    gap: 22px;
+}
+.HeaderText h1 {
+    color: white;
+    text-align: center;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -1.8px;
+}
+.HeaderText h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 28.8px */
+}
+@media (max-width: 768px) {
+    .HeaderText {
+        padding: 0 2vw;
+    }
+    .HeaderText h1 {
+        font-size: 5rem;
+    }
+}

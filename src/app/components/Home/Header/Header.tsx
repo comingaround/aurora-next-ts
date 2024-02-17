@@ -6,7 +6,7 @@ export default function Header(){
     return(
         <div className={styles.Header}>
             <Image 
-                src='/header-image.png'
+                src='/header-dimmed.png'
                 layout="fill"
                 objectFit="cover"
                 alt="header-hero"

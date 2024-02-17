@@ -1,0 +1,33 @@
+.Footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 28px 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.Footer ul li {
+    padding: 6px 0;
+}
+.Footer a {
+    font-size: max(1rem, 14px);
+    font-weight: 250;
+}
+@media (max-width: 767px) {
+    .Footer {
+        padding: 26px 20px;
+    }
+    .Footer > div {
+        order: -1;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .Footer ul {
+        width: 50%;
+        padding: 14px 0;
+        text-align: center;
+    }
+}

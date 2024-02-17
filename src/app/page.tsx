@@ -1,4 +1,3 @@
-import styles from "./home.module.css";
 import Header from "./components/Home/Header/Header";
 import HeroOne from "./components/Home/HeroOne/HeroOne";
 import BestSellers from "./components/Home/BestSellers/BestSellers";

@@ -59,7 +59,7 @@
     z-index: 10;
     left: 0;
     bottom: 0;
-    padding: 0 0 max(2%, 15px) max(2%, 15px);
+    padding: 0 0 max(3%, 15px) max(2%, 15px);
 }
 .CollHorz > div:last-child h2 {
     color: var(--White, #FFF);

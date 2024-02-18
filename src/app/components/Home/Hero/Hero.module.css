@@ -1,14 +1,14 @@
-.Header {
+.Hero {
     margin-top: 24px;
     width: 100%;
     position: relative;
     height: calc(100vh - 76px);
     overflow: hidden;
 }
-.Header img {
+.Hero img {
     border-radius: 10px;
 }
-.HeaderText {
+.HeroText {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
     padding: 0 18vw;
     gap: 22px;
 }
-.HeaderText h1 {
+.HeroText h1 {
     color: white;
     text-align: center;
     font-size: 5.5rem;
@@ -31,7 +31,7 @@
     line-height: 100%;
     letter-spacing: -1.8px;
 }
-.HeaderText h3 {
+.HeroText h3 {
     color: white;
     text-align: center;
     font-size: 1.5rem;
@@ -40,10 +40,10 @@
     line-height: 120%; /* 28.8px */
 }
 @media (max-width: 768px) {
-    .HeaderText {
+    .HeroText {
         padding: 0 2vw;
     }
-    .HeaderText h1 {
+    .HeroText h1 {
         font-size: 5rem;
     }
 }

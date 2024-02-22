@@ -1,3 +1,40 @@
+@font-face {
+  font-family: 'TWKLausanne-250';
+  font-style: normal;
+  font-weight: 250;
+  src: url('/fonts/TWKLausanne-250.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TWKLausanne-300';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/TWKLausanne-300.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TWKLausanne-350';
+  font-style: normal;
+  font-weight: 350;
+  src: url('/fonts/TWKLausanne-350.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TWKLausanne-400';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/TWKLausanne-400.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TWKLausanne-450';
+  font-style: normal;
+  font-weight: 450;
+  src: url('/fonts/TWKLausanne-450.otf') format('opentype');
+}
+@font-face {
+  font-family: 'TWKLausanne-500';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/TWKLausanne-500.otf') format('opentype');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,7 +45,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: "TWK Lausanne", sans-serif;
+  font-family: "TWK Lausanne"!important;
 }
 body {
   padding: 20px;
